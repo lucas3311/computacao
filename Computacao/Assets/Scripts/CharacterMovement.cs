@@ -16,10 +16,12 @@ public class CharacterMovement : MonoBehaviour {
     // 2 - Store the movement
     private Vector2 movement;
 
+    public bool isOnDialogue = false; 
+
     void Update()
     {
         // 3 - Retrieve the mouse position
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && isOnDialogue == false)
         {
             targetPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }

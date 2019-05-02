@@ -25,7 +25,8 @@ public class DialogueManager : MonoBehaviour {
     {
         onDialogue = true;
         text.enabled = true;
-        
+
+        GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>().isOnDialogue = true;
         
         if (Input.GetKey(KeyCode.Mouse0)) {
             lineNumber += 1;
@@ -34,7 +35,7 @@ public class DialogueManager : MonoBehaviour {
                 text.enabled = false;
                 
                 onDialogue = false;
-
+                GameObject.FindGameObjectWithTag("Player").GetComponent<CharacterMovement>().isOnDialogue = false;
                 lineNumber = 0;
             }
         }

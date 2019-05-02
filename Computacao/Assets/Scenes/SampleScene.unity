@@ -1922,7 +1922,7 @@ GameObject:
   - component: {fileID: 2113061921}
   m_Layer: 0
   m_Name: Personagem
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1941,6 +1941,7 @@ MonoBehaviour:
   speed: {x: 5, y: 0}
   targetPosition: {x: 0, y: 0}
   relativePosition: {x: 0, y: 0}
+  isOnDialogue: 0
 --- !u!4 &2113061920
 Transform:
   m_ObjectHideFlags: 0
