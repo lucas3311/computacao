@@ -505,6 +505,7 @@ MonoBehaviour:
   - There's no easter egg here
   - Go away
   - Thanks
+  - Thanks
 --- !u!50 &272694892
 Rigidbody2D:
   serializedVersion: 4
@@ -1216,6 +1217,7 @@ GameObject:
   - component: {fileID: 1341356171}
   - component: {fileID: 1341356170}
   - component: {fileID: 1341356173}
+  - component: {fileID: 1341356174}
   m_Layer: 0
   m_Name: Pilar (1)
   m_TagString: Untagged
@@ -1229,7 +1231,7 @@ BoxCollider2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1341356169}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -1327,6 +1329,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1341356174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1341356169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b36edc1510a90d468c961f3e3b6a711, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Lines:
+  - This is a pillar
+  - Tks
+  - 
 --- !u!1 &1388834724
 GameObject:
   m_ObjectHideFlags: 0
