@@ -16,8 +16,9 @@ public class CharacterMovement : MonoBehaviour {
     // 2 - Store the movement
     private Vector2 movement;
 
-    public bool isOnDialogue = false; 
+    public bool isOnDialogue = false;
 
+    public GameObject CharacGraphics;
     void Update()
     {
         // 3 - Retrieve the mouse position
@@ -56,6 +57,14 @@ public class CharacterMovement : MonoBehaviour {
 
         // 6 - Move the game object using the physics engine
         gameObject.GetComponent<Rigidbody2D>().velocity = movement;
-
+        //Debug.Log(movement);
+        if(movement.x < 0)
+        {
+            CharacGraphics.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else
+        {
+            CharacGraphics.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 }
