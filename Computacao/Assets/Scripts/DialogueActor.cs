@@ -21,7 +21,7 @@ public class DialogueActor : MonoBehaviour {
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
             if (hit.collider == gameObject.GetComponent<Collider2D>())
             {
-                Debug.Log(hit.collider.gameObject.name);
+                //Debug.Log(hit.collider.gameObject.name);
                 //hit.collider.attachedRigidbody.AddForce(Vector2.up);
                 GameObject.Find("GameManager").GetComponent<DialogueManager>().text.text = Lines[GameObject.Find("GameManager").GetComponent<DialogueManager>().lineNumber]; 
                 GameObject.Find("GameManager").GetComponent<DialogueManager>().lineDialogue(Lines);
