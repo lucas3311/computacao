@@ -25,5 +25,18 @@ public class CursorManager : MonoBehaviour {
         {
             Cursor.SetCursor(cursorTextureNormal, Vector2.zero, cursorMode);
         }
-	}
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+
+        RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+        if (hit.collider != null && hit.collider.tag == "Int")
+        {
+            gameObject.GetComponent<CursorManager>().isCursorOn = true;
+        }
+        else
+        {
+            gameObject.GetComponent<CursorManager>().isCursorOn = false;
+        }
+    }
 }
