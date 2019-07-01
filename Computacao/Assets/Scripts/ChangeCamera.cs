@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChangeCamera : MonoBehaviour {
     public GameObject cameraOff;
     public GameObject cameraOn;
+    public GameObject casaFundo;
     // Use this for initialization
     void Start () {
 		
@@ -16,6 +17,7 @@ public class ChangeCamera : MonoBehaviour {
         {
             cameraOff.SetActive(false);
             cameraOn.SetActive(true);
+            casaFundo.SetActive(!casaFundo.activeInHierarchy);
         }
         }
 }
